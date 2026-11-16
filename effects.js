@@ -108,4 +108,27 @@
       requestAnimationFrame(tick);
     });
   }
+
+  /* ---------- public visitor counter (counts each browser once; hidden if the service is unreachable) ---------- */
+  (function () {
+    var el = document.getElementById("visit-count");
+    if (!el || !window.fetch) return;
+    var base = "https://abacus.jasoncameron.dev/", ns = "aamengineer-manuniet", key = "visits", counted = false;
+    try { counted = localStorage.getItem("aam_counted") === "1"; } catch (e) {}
+    function show(v) {
+      if (typeof v !== "number" || !isFinite(v)) return;
+      el.textContent = " · " + v.toLocaleString("en-US") + " visitors";
+      el.hidden = false;
+    }
+    function hit() {
+      return fetch(base + "hit/" + ns + "/" + key).then(function (r) { return r.json(); }).then(function (d) {
+        try { localStorage.setItem("aam_counted", "1"); } catch (e) {}
+        show(d.value);
+      });
+    }
+    var p = counted
+      ? fetch(base + "get/" + ns + "/" + key).then(function (r) { return r.ok ? r.json() : hit().then(function () { return null; }); }).then(function (d) { if (d) show(d.value); })
+      : hit();
+    p.catch(function () {});
+  })();
 })();

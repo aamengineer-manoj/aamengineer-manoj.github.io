@@ -9,6 +9,7 @@ Personal site of **Manoj Chauhan**, Member of Technical Staff at PayPal, who off
 | Page | File | What it shows |
 | --- | --- | --- |
 | Home | `index.html` | Mock interview offer, session flow, topics, services and pricing, free checklist, writing, about, FAQ |
+| My story | `story.html` | How Manoj moved from a service company to PayPal |
 | Resume | `resume.html` | Experience, skills, certifications, awards and education |
 | Hobbies | `hobbies.html` | Strength training, travelling, Vedic astrology, numerology, crystals and creating content |
 
@@ -20,6 +21,7 @@ Bookings go through [Topmate](https://topmate.io/manoj_chauhan/).
 index.html                       Home page
 resume.html                      Resume page
 hobbies.html                     Hobbies page
+story.html                       My story page
 styles.css                       Shared styles (graphite and gold, light and dark mode)
 effects.js                       Network background animation and count-up numbers
 og.png                           Share preview image for LinkedIn, WhatsApp and Instagram

@@ -17,19 +17,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P4R6DNZ8');</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1EF49W8H0L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1EF49W8H0L');
+</script>
 </head>
 <body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4R6DNZ8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="top">
   <div class="wrap">
     <a class="brand" href="index.html"><i>A</i><span>Aam Engineer<small>by Manoj Chauhan</small></span></a>
     <nav class="links" aria-label="Main">
       <a class="nl" href="index.html" aria-current="page">Mock interviews</a>
+      <a class="nl" href="story.html">My story</a>
       <a class="nl" href="resume.html">Resume</a>
       <a class="nl" href="hobbies.html">Hobbies</a>
       <a class="btn small" data-book href="https://topmate.io/manoj_chauhan/">Book a session</a>
@@ -212,10 +214,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </section>
 
+  <section id="story">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="label">07 / my story</div>
+        <h2>From a service company to PayPal.</h2>
+      </div>
+      <div class="sec-body">
+        <div class="prose">
+          <p>Rejection after rejection. Tough interviews. Mock after mock until my own work finally made sense out loud. Then an offer at 2 AM on 31 August 2021, and a feeling I can only call stillness.</p>
+          <p><a class="btn ghost" href="story.html">Read my story</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="about">
     <div class="wrap">
       <div class="sec-head">
-        <div class="label">07 / about</div>
+        <div class="label">08 / about</div>
         <h2>Hi, I'm Manoj.</h2>
       </div>
       <div class="sec-body">
@@ -236,7 +253,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <section id="faq">
     <div class="wrap">
       <div class="sec-head">
-        <div class="label">08 / questions</div>
+        <div class="label">09 / questions</div>
         <h2>Before you book.</h2>
       </div>
       <div class="sec-body">
@@ -259,14 +276,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <footer>
   <div class="wrap">
-    <span>Aam Engineer · Manoj Chauhan, Bengaluru</span>
+    <span>Aam Engineer · Manoj Chauhan, Bengaluru<span class="vc" id="visit-count" hidden></span></span>
     <span class="links"><a href="https://www.linkedin.com/in/manojchauhan28/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/themanojsphere" target="_blank" rel="noopener">Instagram</a></span>
   </div>
 </footer>
 <script>
   var BOOK_URL = "https://topmate.io/manoj_chauhan/";
   window.dataLayer = window.dataLayer || [];
-  document.querySelectorAll("[data-book]").forEach(function (a) { a.setAttribute("href", BOOK_URL); a.setAttribute("target", "_blank"); a.setAttribute("rel", "noopener"); a.addEventListener("click", function () { window.dataLayer.push({ event: "book_click", book_label: (a.textContent || "").trim().slice(0, 60), page_path: location.pathname }); }); });
+  document.querySelectorAll("[data-book]").forEach(function (a) { a.setAttribute("href", BOOK_URL); a.setAttribute("target", "_blank"); a.setAttribute("rel", "noopener"); a.addEventListener("click", function () { if (window.gtag) { gtag("event", "book_click", { book_label: (a.textContent || "").trim().slice(0, 60), page_path: location.pathname }); } }); });
 </script>
 <script src="effects.js" defer></script>
 </body>

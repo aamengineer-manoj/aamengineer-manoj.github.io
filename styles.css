@@ -248,3 +248,15 @@ canvas.fx { position: absolute; top: -64px; left: 50%; width: 100vw; height: cal
 .trust a.co:hover { border-color: var(--gold); transform: translateY(-1px); }
 .job .where a { color: var(--accent); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--gold) 50%, transparent); }
 .job .where a:hover { border-bottom-color: var(--gold); }
+
+.vc { font-family: var(--mono); font-size: 13px; color: var(--muted); }
+
+/* story */
+.prose p { font-size: 19px; line-height: 1.75; max-width: 60ch; margin: 0 0 18px; }
+.quote { margin: 0 0 22px; padding: 8px 0 8px 24px; border-left: 3px solid var(--gold); font-family: var(--display); font-size: clamp(21px, 3vw, 27px); line-height: 1.4; letter-spacing: -0.012em; max-width: 36ch; }
+.rail { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 30px 0 0; padding: 0; }
+.rail li { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 9px 16px; font-size: 15px; }
+.rail li b { display: block; font-family: var(--mono); font-weight: 500; font-size: 12.5px; color: var(--accent); }
+.lessons { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: 64ch; }
+.lessons li { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 12px; padding: 18px 22px; font-size: 17px; color: var(--muted); }
+.lessons li b { display: block; color: var(--ink); font-family: var(--display); font-size: 19px; margin-bottom: 2px; }
