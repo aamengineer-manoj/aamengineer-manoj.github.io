@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Project | Context-Aware Conversational Engine | AamEngineer</title>
+<meta name="description" content="Manoj Chauhan's MTech AI project at BITS Pilani: a multi-turn retrieval-augmented conversational engine using open-source language models.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI Project | Context-Aware Conversational Engine | AamEngineer">
+<meta property="og:description" content="Manoj Chauhan's MTech AI project at BITS Pilani: a multi-turn retrieval-augmented conversational engine using open-source language models.">
+<meta property="og:image" content="https://aamengineer-manoj.github.io/og.png">
+<meta property="og:url" content="https://aamengineer-manoj.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://aamengineer-manoj.github.io/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23B8892B'/%3E%3Ctext x='16' y='23' font-family='Arial' font-size='20' font-weight='700' text-anchor='middle' fill='%2316181B'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1EF49W8H0L"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var m = ["aamengineer.manoj", "gmail.com"].join("@");
+    var subj = "Mock interview enquiry";
+    var mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    var gm = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(m) + "&su=" + encodeURIComponent(subj);
+    document.querySelectorAll("[data-mail]").forEach(function (a) {
+      if (mobile) { a.setAttribute("href", "mailto:" + m + "?subject=" + encodeURIComponent(subj)); }
+      else { a.setAttribute("href", gm); a.setAttribute("target", "_blank"); a.setAttribute("rel", "noopener"); }
+      if (a.hasAttribute("data-show")) a.textContent = m;
+    });
+    var wa = "https://wa.me/" + ["91", "7503188899"].join("") + "?text=" + encodeURIComponent("Hi Manoj, I'd like to know more about the mock interviews.");
+    document.querySelectorAll("[data-wa]").forEach(function (a) { a.setAttribute("href", wa); a.setAttribute("target", "_blank"); a.setAttribute("rel", "noopener"); });
+  });
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1EF49W8H0L');
+</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><i>a</i><span>AamEngineer<small>by Manoj Chauhan</small></span></a>
+    <nav class="links" aria-label="Main">
+      <a class="nl" href="index.html">Mock interviews</a>
+      <a class="nl" href="story.html">My story</a>
+      <a class="nl" href="resume.html">Resume</a>
+      <a class="nl" href="projects.html" aria-current="page">AI project</a>
+      <a class="nl" href="hobbies.html">Hobbies</a>
+      <a class="btn small" data-book href="https://topmate.io/manoj_chauhan/">Book a session</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <div class="page-hero"><canvas class="fx" aria-hidden="true"></canvas>
+      <span class="tag">MTech AI and ML · BITS Pilani · 2026</span>
+      <h1>A conversational engine that answers from your own documents.</h1>
+      <p class="lead">My MTech dissertation: a multi-turn, retrieval-augmented chat system built entirely on open-source models, with a measurable way to compare them.</p>
+      <div class="cta"><a class="btn" href="https://github.com/aamengineer-manoj/rag-conversational-engine" target="_blank" rel="noopener">View the code on GitHub</a></div>
+    </div>
+  </div>
+
+  <section id="problem">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="label">the problem</div>
+        <h2>Why this project.</h2>
+      </div>
+      <div class="sec-body">
+        <div class="prose">
+          <p>Companies keep policies, API guides and runbooks across many tools, and employees still struggle to find answers. Language models are fluent but can invent facts and know nothing about private documents. Retrieval-augmented generation (RAG) fixes part of that by giving the model relevant passages first.</p>
+          <p>The harder part is the conversation. A follow-up like "what about business accounts?" means nothing alone, and a long chat eventually overflows the model's prompt. This project tackles both.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="label">how it works</div>
+        <h2>One turn, end to end.</h2>
+      </div>
+      <div class="sec-body">
+        <div class="grid3">
+          <div class="card"><span class="num">01 / ingest</span><h3>Semantic chunking</h3><p>Documents are split by headings and paragraphs, then merged by embedding similarity so each chunk keeps one topic.</p></div>
+          <div class="card"><span class="num">02 / retrieve</span><h3>Query-aware retrieval</h3><p>The previous question is added before searching, so follow-ups find the right passages. FAISS finds the closest chunks, and a tuned score threshold drops weak matches.</p></div>
+          <div class="card"><span class="num">03 / answer</span><h3>Grounded prompt</h3><p>Retrieved knowledge, conversation history and the current question are labelled clearly in the prompt. If nothing relevant is found, the engine says so in code instead of letting the model guess.</p></div>
+          <div class="card"><span class="num">04 / remember</span><h3>Bounded memory</h3><p>Recent turns stay word for word while older ones roll into a short summary, so the prompt stays small in long chats.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="build">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="label">the build</div>
+        <h2>What I built.</h2>
+      </div>
+      <div class="sec-body">
+        <div class="grid3">
+          <div class="card"><span class="num">stack</span><h3>Fully open source</h3><p>Python, Hugging Face Transformers, Sentence-Transformers, FAISS and Streamlit. No paid APIs, and it can run offline.</p></div>
+          <div class="card"><span class="num">models</span><h3>Two backends, one interface</h3><p>Qwen2.5-1.5B-Instruct and TinyLlama-1.1B-Chat run on identical retrieval and memory, so any difference comes from the model itself.</p></div>
+          <div class="card"><span class="num">quality</span><h3>Tested and measurable</h3><p>21 unit tests, a terminal and a browser chat interface, and an evaluation harness with BLEU, ROUGE, BERTScore, retrieval precision and recall, a groundedness check and latency, on an 18-question hand-labelled set.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="learned">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="label">what I learned</div>
+        <h2>Decisions that came from real failures.</h2>
+      </div>
+      <div class="sec-body">
+        <div class="prose">
+          <p>Small models often ignored an instruction to say "I don't know", so I moved that rule into code. Passing every retrieved chunk made the model contradict itself, so I measured scores and set a cut-off in the gap between relevant and off-topic matches. Follow-up questions failed until the previous turn was added to the search.</p>
+          <p>It is a research prototype on a small, synthetic knowledge base of six documents, so I make no claims about large-scale performance. It is the same habit I bring to mock interviews: say what you built, why, and where it breaks.</p>
+          <p><a class="btn ghost" href="https://github.com/aamengineer-manoj/rag-conversational-engine" target="_blank" rel="noopener">Read the code</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <h2>Want help explaining your own project in an interview?</h2>
+      <div class="cta"><a class="btn" data-book href="https://topmate.io/manoj_chauhan/">Book a 60-minute session</a><a class="btn ghost" data-mail href="#">Email me</a><a class="btn ghost" data-wa href="#">WhatsApp me</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>aamengineer · Manoj Chauhan, Bengaluru<span class="vc" id="visit-count" hidden></span></span>
+    <span class="links"><a data-mail data-show href="#">Email</a><a data-wa href="#">WhatsApp</a><a href="https://www.linkedin.com/in/manojchauhan28/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.youtube.com/@aamengineer" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/themanojsphere" target="_blank" rel="noopener">Instagram</a></span>
+  </div>
+</footer>
+<script>
+  var BOOK_URL = "https://topmate.io/manoj_chauhan/";
+  window.dataLayer = window.dataLayer || [];
+  document.querySelectorAll("[data-book]").forEach(function (a) { a.setAttribute("href", BOOK_URL); a.setAttribute("target", "_blank"); a.setAttribute("rel", "noopener"); a.addEventListener("click", function () { if (window.gtag) { gtag("event", "book_click", { book_label: (a.textContent || "").trim().slice(0, 60), page_path: location.pathname }); } }); });
+</script>
+<script src="effects.js" defer></script>
+</body>
+</html>
