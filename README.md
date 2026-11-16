@@ -1,8 +1,8 @@
-# Aam Engineer
+# aamengineer
 
 Personal site of **Manoj Chauhan**, Member of Technical Staff at PayPal, who offers 1:1 mock interviews for Java, DSA and system design.
 
-**Live site:** https://manuniet.github.io
+**Live site:** https://aamengineer-manoj.github.io
 
 ## What is on the site
 
@@ -52,6 +52,7 @@ Common edits:
 
 ## Contact
 
+- Email: aamengineer.manoj@gmail.com
 - LinkedIn: https://www.linkedin.com/in/manojchauhan28/
 - Instagram: https://www.instagram.com/themanojsphere
 

@@ -19,6 +19,15 @@
 <link rel="stylesheet" href="styles.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1EF49W8H0L"></script>
 <script>
+  (function () {
+    var m = ["aamengineer.manoj", "gmail.com"].join("@");
+    document.querySelectorAll("[data-mail]").forEach(function (a) {
+      a.setAttribute("href", "mailto:" + m + "?subject=" + encodeURIComponent("Mock interview enquiry"));
+      if (a.hasAttribute("data-show")) a.textContent = m;
+    });
+  var wa = "https://wa.me/" + ["91", "7503188899"].join("") + "?text=" + encodeURIComponent("Hi Manoj, I'd like to know more about the mock interviews.");
+    document.querySelectorAll("[data-wa]").forEach(function (a) { a.setAttribute("href", wa); a.setAttribute("target", "_blank"); a.setAttribute("rel", "noopener"); });
+  })();
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -28,7 +37,7 @@
 <body>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="index.html"><i>A</i><span>Aam Engineer<small>by Manoj Chauhan</small></span></a>
+    <a class="brand" href="index.html"><i>a</i><span>aamengineer<small>by Manoj Chauhan</small></span></a>
     <nav class="links" aria-label="Main">
       <a class="nl" href="index.html">Mock interviews</a>
       <a class="nl" href="story.html">My story</a>
@@ -70,15 +79,15 @@
   <section class="final">
     <div class="wrap">
       <h2>Prepping for a backend interview?</h2>
-      <div class="cta"><a class="btn" data-book href="https://topmate.io/manoj_chauhan/">Book a 60-minute session</a></div>
+      <div class="cta"><a class="btn" data-book href="https://topmate.io/manoj_chauhan/">Book a 60-minute session</a><a class="btn ghost" data-mail href="#">Email me</a><a class="btn ghost" data-wa href="#">WhatsApp me</a></div>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <span>Aam Engineer · Manoj Chauhan, Bengaluru<span class="vc" id="visit-count" hidden></span></span>
-    <span class="links"><a href="https://www.linkedin.com/in/manojchauhan28/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/themanojsphere" target="_blank" rel="noopener">Instagram</a></span>
+    <span>aamengineer · Manoj Chauhan, Bengaluru<span class="vc" id="visit-count" hidden></span></span>
+    <span class="links"><a data-mail data-show href="#">Email</a><a data-wa href="#">WhatsApp</a><a href="https://www.linkedin.com/in/manojchauhan28/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/themanojsphere" target="_blank" rel="noopener">Instagram</a></span>
   </div>
 </footer>
 <script>

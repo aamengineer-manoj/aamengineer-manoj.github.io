@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aam Engineer Mock Interviews</title>
-<meta name="description" content="Aam Engineer: 1:1 mock interviews for Java, DSA and system design from Manoj Chauhan, a PayPal engineer who has taken 500+ technical interviews.">
+<title>aamengineer Mock Interviews</title>
+<meta name="description" content="aamengineer: 1:1 mock interviews for Java, DSA and system design from Manoj Chauhan, a PayPal engineer who has taken 500+ technical interviews.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Aam Engineer Mock Interviews">
-<meta property="og:description" content="Aam Engineer: 1:1 mock interviews for Java, DSA and system design from Manoj Chauhan, a PayPal engineer who has taken 500+ technical interviews.">
+<meta property="og:title" content="aamengineer Mock Interviews">
+<meta property="og:description" content="aamengineer: 1:1 mock interviews for Java, DSA and system design from Manoj Chauhan, a PayPal engineer who has taken 500+ technical interviews.">
 <meta property="og:image" content="https://manuniet.github.io/og.png">
 <meta property="og:url" content="https://manuniet.github.io/">
 <meta name="twitter:card" content="summary_large_image">
@@ -19,6 +19,15 @@
 <link rel="stylesheet" href="styles.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1EF49W8H0L"></script>
 <script>
+  (function () {
+    var m = ["aamengineer.manoj", "gmail.com"].join("@");
+    document.querySelectorAll("[data-mail]").forEach(function (a) {
+      a.setAttribute("href", "mailto:" + m + "?subject=" + encodeURIComponent("Mock interview enquiry"));
+      if (a.hasAttribute("data-show")) a.textContent = m;
+    });
+  var wa = "https://wa.me/" + ["91", "7503188899"].join("") + "?text=" + encodeURIComponent("Hi Manoj, I'd like to know more about the mock interviews.");
+    document.querySelectorAll("[data-wa]").forEach(function (a) { a.setAttribute("href", wa); a.setAttribute("target", "_blank"); a.setAttribute("rel", "noopener"); });
+  })();
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -28,7 +37,7 @@
 <body>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="index.html"><i>A</i><span>Aam Engineer<small>by Manoj Chauhan</small></span></a>
+    <a class="brand" href="index.html"><i>a</i><span>aamengineer<small>by Manoj Chauhan</small></span></a>
     <nav class="links" aria-label="Main">
       <a class="nl" href="index.html" aria-current="page">Mock interviews</a>
       <a class="nl" href="story.html">My story</a>
@@ -44,7 +53,7 @@
     <div class="hero"><canvas class="fx" aria-hidden="true"></canvas>
       <div class="hero-grid">
         <div>
-          <span class="tag">Aam Engineer · mock interviews for Java, DSA and system design</span>
+          <span class="tag">aamengineer · mock interviews for Java, DSA and system design</span>
           <h1>Find out where your interview answers break.</h1>
           <p class="lead">I have taken 500+ technical interviews. In one 60-minute session you get a realistic interview at your level and specific feedback you can act on the same week.</p>
           <div class="cta">
@@ -222,7 +231,7 @@
       </div>
       <div class="sec-body">
         <div class="prose">
-          <p>Rejection after rejection. Tough interviews. Mock after mock until my own work finally made sense out loud. Then an offer at 2 AM on 31 August 2021, and a feeling I can only call stillness.</p>
+          <p>More than 20 rejections. Tough interviews. Mock after mock until my own work finally made sense out loud. Then an offer at 2 AM on 31 August 2021, and a feeling I can only call stillness.</p>
           <p><a class="btn ghost" href="story.html">Read my story</a></p>
         </div>
       </div>
@@ -269,15 +278,15 @@
   <section class="final">
     <div class="wrap">
       <h2>Book one session and see where you stand.</h2>
-      <div class="cta"><a class="btn" data-book href="https://topmate.io/manoj_chauhan/">Book a 60-minute session</a><a class="btn ghost" href="https://www.linkedin.com/in/manojchauhan28/" target="_blank" rel="noopener">Message me on LinkedIn</a></div>
+      <div class="cta"><a class="btn" data-book href="https://topmate.io/manoj_chauhan/">Book a 60-minute session</a><a class="btn ghost" href="https://www.linkedin.com/in/manojchauhan28/" target="_blank" rel="noopener">Message me on LinkedIn</a><a class="btn ghost" data-mail href="#">Email me</a><a class="btn ghost" data-wa href="#">WhatsApp me</a></div>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <span>Aam Engineer · Manoj Chauhan, Bengaluru<span class="vc" id="visit-count" hidden></span></span>
-    <span class="links"><a href="https://www.linkedin.com/in/manojchauhan28/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/themanojsphere" target="_blank" rel="noopener">Instagram</a></span>
+    <span>aamengineer · Manoj Chauhan, Bengaluru<span class="vc" id="visit-count" hidden></span></span>
+    <span class="links"><a data-mail data-show href="#">Email</a><a data-wa href="#">WhatsApp</a><a href="https://www.linkedin.com/in/manojchauhan28/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/themanojsphere" target="_blank" rel="noopener">Instagram</a></span>
   </div>
 </footer>
 <script>
