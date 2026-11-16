@@ -260,3 +260,7 @@ canvas.fx { position: absolute; top: -64px; left: 50%; width: 100vw; height: cal
 .lessons { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: 64ch; }
 .lessons li { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 12px; padding: 18px 22px; font-size: 17px; color: var(--muted); }
 .lessons li b { display: block; color: var(--ink); font-family: var(--display); font-size: 19px; margin-bottom: 2px; }
+
+.tagline { font-family: var(--mono); font-size: 14px; color: var(--accent); letter-spacing: 0.02em; margin: -6px 0 16px; }
+.follow { margin-top: 22px; color: var(--muted); font-size: 16px; }
+.follow a { color: var(--accent); text-underline-offset: 3px; }

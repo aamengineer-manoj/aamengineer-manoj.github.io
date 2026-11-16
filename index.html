@@ -8,10 +8,10 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="aamengineer Mock Interviews">
 <meta property="og:description" content="aamengineer: 1:1 mock interviews for Java, DSA and system design from Manoj Chauhan, a PayPal engineer who has taken 500+ technical interviews.">
-<meta property="og:image" content="https://manuniet.github.io/og.png">
-<meta property="og:url" content="https://manuniet.github.io/">
+<meta property="og:image" content="https://aamengineer-manoj.github.io/og.png">
+<meta property="og:url" content="https://aamengineer-manoj.github.io/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://manuniet.github.io/og.png">
+<meta name="twitter:image" content="https://aamengineer-manoj.github.io/og.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23B8892B'/%3E%3Ctext x='16' y='23' font-family='Arial' font-size='20' font-weight='700' text-anchor='middle' fill='%2316181B'%3EA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,15 +19,19 @@
 <link rel="stylesheet" href="styles.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1EF49W8H0L"></script>
 <script>
-  (function () {
+  document.addEventListener("DOMContentLoaded", function () {
     var m = ["aamengineer.manoj", "gmail.com"].join("@");
+    var subj = "Mock interview enquiry";
+    var mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    var gm = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(m) + "&su=" + encodeURIComponent(subj);
     document.querySelectorAll("[data-mail]").forEach(function (a) {
-      a.setAttribute("href", "mailto:" + m + "?subject=" + encodeURIComponent("Mock interview enquiry"));
+      if (mobile) { a.setAttribute("href", "mailto:" + m + "?subject=" + encodeURIComponent(subj)); }
+      else { a.setAttribute("href", gm); a.setAttribute("target", "_blank"); a.setAttribute("rel", "noopener"); }
       if (a.hasAttribute("data-show")) a.textContent = m;
     });
-  var wa = "https://wa.me/" + ["91", "7503188899"].join("") + "?text=" + encodeURIComponent("Hi Manoj, I'd like to know more about the mock interviews.");
+    var wa = "https://wa.me/" + ["91", "7503188899"].join("") + "?text=" + encodeURIComponent("Hi Manoj, I'd like to know more about the mock interviews.");
     document.querySelectorAll("[data-wa]").forEach(function (a) { a.setAttribute("href", wa); a.setAttribute("target", "_blank"); a.setAttribute("rel", "noopener"); });
-  })();
+  });
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -37,7 +41,7 @@
 <body>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="index.html"><i>a</i><span>aamengineer<small>by Manoj Chauhan</small></span></a>
+    <a class="brand" href="index.html"><i>a</i><span>AamEngineer<small>by Manoj Chauhan</small></span></a>
     <nav class="links" aria-label="Main">
       <a class="nl" href="index.html" aria-current="page">Mock interviews</a>
       <a class="nl" href="story.html">My story</a>
@@ -205,10 +209,30 @@
     </div>
   </section>
 
+  <section id="tips">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="label">06 / tips</div>
+        <h2>Six tips from 500+ interviews.</h2>
+      </div>
+      <div class="sec-body">
+        <div class="grid3">
+          <div class="card"><span class="num">01</span><h3>Think aloud</h3><p>Silence reads as being stuck. Say your approach, the trade-offs and why you picked one, even before you write code.</p></div>
+          <div class="card"><span class="num">02</span><h3>Know your own project</h3><p>Expect follow-ups on every line of your resume. If you can't explain why a design choice was made, drop it from the page.</p></div>
+          <div class="card"><span class="num">03</span><h3>Clarify before you solve</h3><p>Ask about input size, edge cases and constraints first. It shows judgment, and it saves you from solving the wrong problem.</p></div>
+          <div class="card"><span class="num">04</span><h3>Start simple, then improve</h3><p>Give the brute-force answer, state its cost, then optimise. A working answer you can reason about beats a clever one you can't.</p></div>
+          <div class="card"><span class="num">05</span><h3>Practise out loud</h3><p>Reading solutions is not the same as explaining them. Do mocks, record yourself and fix the places where you ramble.</p></div>
+          <div class="card"><span class="num">06</span><h3>Treat rejections as data</h3><p>After each round, write down what was weak and fix that one thing. Twenty rejections taught me more than any course.</p></div>
+        </div>
+        <p class="caption">Want these applied to your own answers? <a href="https://topmate.io/manoj_chauhan/" data-book target="_blank" rel="noopener">Book a mock interview</a>.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="writing">
     <div class="wrap">
       <div class="sec-head">
-        <div class="label">06 / writing</div>
+        <div class="label">07 / writing</div>
         <h2>What I write about.</h2>
       </div>
       <div class="sec-body">
@@ -226,7 +250,7 @@
   <section id="story">
     <div class="wrap">
       <div class="sec-head">
-        <div class="label">07 / my story</div>
+        <div class="label">08 / my story</div>
         <h2>From a service company to PayPal.</h2>
       </div>
       <div class="sec-body">
@@ -241,7 +265,7 @@
   <section id="about">
     <div class="wrap">
       <div class="sec-head">
-        <div class="label">08 / about</div>
+        <div class="label">09 / about</div>
         <h2>Hi, I'm Manoj.</h2>
       </div>
       <div class="sec-body">
@@ -262,7 +286,7 @@
   <section id="faq">
     <div class="wrap">
       <div class="sec-head">
-        <div class="label">09 / questions</div>
+        <div class="label">10 / questions</div>
         <h2>Before you book.</h2>
       </div>
       <div class="sec-body">
